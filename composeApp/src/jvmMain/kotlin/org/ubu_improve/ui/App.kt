@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.ubu_improve.currentVersion
 import org.ubu_improve.ui.theme.AppTypography
 import org.ubu_improve.ui.theme.ColorTheme
 
@@ -24,7 +25,7 @@ fun App() {
                 Box(Modifier.fillMaxWidth()){
                     Column (Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally){
                         LargeTitle("UBU-IMPROVE")
-                        Text("Version: $currentVersion", fontSize = 10.sp)
+                        Text("Version: ${currentVersion}", fontSize = 10.sp)
                     }
                 }
 

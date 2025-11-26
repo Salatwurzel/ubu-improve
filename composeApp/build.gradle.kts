@@ -21,9 +21,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
         }
-        commonTest.dependencies {
-            implementation(libs.kotlin.test)
-        }
+
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
@@ -39,7 +37,7 @@ compose.resources {
 
 compose.desktop {
     application {
-        mainClass = "org.ubu_improve.ui.MainKt"
+        mainClass = "org.ubu_improve.MainKt"
 
         nativeDistributions {
             val iconsRoot = project.file("src/jvmMain/resources")
@@ -49,7 +47,7 @@ compose.desktop {
             packageVersion = "1.0.0"
             linux {
                 iconFile.set(File("src/jvmMain/resources/wurzelavatar.png"))
-                println("ICON path ${project.file("appicon/appicon.icns")}")
+                println("ICON path ${project.file("src/jvmMain/resources/wurzelavatar.png")}")
             }
         }
     }
