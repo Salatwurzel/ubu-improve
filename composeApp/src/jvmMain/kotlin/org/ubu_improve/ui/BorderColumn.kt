@@ -21,7 +21,7 @@ import org.ubu_improve.ui.theme.AppTypography
 @Preview
 fun BorderColumn(
     modifier: Modifier = Modifier
-        .width(325.dp)
+        .width(350.dp)
         .height(250.dp)
         .padding(horizontal = 25.dp, vertical = 15.dp)
     ,
