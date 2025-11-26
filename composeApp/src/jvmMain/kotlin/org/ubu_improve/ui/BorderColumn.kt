@@ -21,9 +21,9 @@ import org.ubu_improve.ui.theme.AppTypography
 @Preview
 fun BorderColumn(
     modifier: Modifier = Modifier
-        .width(300.dp)
+        .width(325.dp)
         .height(250.dp)
-        .padding(15.dp)
+        .padding(horizontal = 25.dp, vertical = 15.dp)
     ,
 
     horizontalAlignment: Alignment.Horizontal = Alignment.CenterHorizontally,
@@ -35,7 +35,7 @@ fun BorderColumn(
         Row(Modifier.fillMaxWidth()){
             Title(" $titleText")
         }
-        Column(Modifier.fillMaxSize().border(2.dp, Color.DarkGray).padding(5.dp)){
+        Column(Modifier.fillMaxSize().border(1.dp, Color.DarkGray).padding(5.dp)){
             Column(Modifier.fillMaxSize()){
                 content()
             }
