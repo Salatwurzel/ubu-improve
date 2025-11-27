@@ -2,10 +2,8 @@
 
 package org.ubu_improve.ui
 
-import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.rememberScrollbarAdapter
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -18,7 +16,7 @@ import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.ubu_improve.currentVersion
 import org.ubu_improve.ui.desktopOptions.desktopOptions
-import org.ubu_improve.ui.sdks.sdkOptions
+import org.ubu_improve.ui.sdkOptions.sdkOptions
 import org.ubu_improve.ui.systemOptions.SystemOptions
 import org.ubu_improve.ui.theme.AppTypography
 import org.ubu_improve.ui.theme.ColorTheme

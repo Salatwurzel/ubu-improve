@@ -1,4 +1,4 @@
-package org.ubu_improve.ui.sdks
+package org.ubu_improve.ui.sdkOptions
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Box
