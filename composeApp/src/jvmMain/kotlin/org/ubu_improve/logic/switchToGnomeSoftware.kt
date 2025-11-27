@@ -5,10 +5,11 @@ import java.io.File
 fun switchToGnomeSoftwareWithFlatpak() {
     val startMessages = listOf(
         "--------------------------------------------------------",
-        "INFO: This will replace the standard Software-Center with \"Gnome-Software\"",
-        "INFO: Flatpak and the Flathub software repository will also be added",
+        " This script will replace the standard Software-Center with \"Gnome-Software\"",
+        " The Flathub repository will be added for more Software availability",
         "--------------------------------------------------------",
-        "Press any key to continue"
+        "",
+        "Press Enter to start"
     )
 
     val commandList = mutableListOf<String>(

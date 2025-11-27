@@ -2,7 +2,11 @@ package org.ubu_improve.logic
 
 fun installRustSDK() {
     val startMessages = listOf(
-        "Press any key to run the Rust installer"
+        "---------------------------------",
+        "THIS WILL DOWNLOAD AND RUN THE RUST INSTALLER",
+        "---------------------------------",
+        "",
+        "Press Enter to start"
     )
 
     val commands = listOf(

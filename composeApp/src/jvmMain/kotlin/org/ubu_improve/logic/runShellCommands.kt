@@ -12,7 +12,7 @@ fun runShellCommands(
     var allCommandsInOneString = String();
 
     for (message in messagesBeforeStart){
-        allCommandsInOneString += "echo $message;"
+        allCommandsInOneString += "echo '$message';"
     }
     if (pressEnterBeforeStart){
         allCommandsInOneString += "read;"
@@ -27,15 +27,15 @@ fun runShellCommands(
         closeMessage += "echo '';"
 
         for (message in messagesAfterEnd){
-            closeMessage += "echo $message;"
+            closeMessage += "echo '$message';"
         }
 
-        closeMessage += "echo 'Everything done, press any key to exit...';"
+        closeMessage += "echo 'Everything done, press Enter to exit...';"
         closeMessage += "read;"
 
     }
 
-    val pb = ProcessBuilder("x-terminal-emulator", "-e", "/bin/bash -c \"$allCommandsInOneString $closeMessage\"")
+    val pb = ProcessBuilder("x-terminal-emulator", "-e", "/usr/bin/env bash -c \"$allCommandsInOneString $closeMessage\"")
     pb.inheritIO()
     pb.start()
 }

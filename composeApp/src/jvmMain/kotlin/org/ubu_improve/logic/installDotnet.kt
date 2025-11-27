@@ -3,9 +3,10 @@ package org.ubu_improve.logic
 fun installDotnet() {
     val startMessages = listOf(
         "--------------------------------------------------------",
-        "INFO: THIS WILL DOWNLOAD AND RUN THE DOTNET INSTALLER",
+        "INFO: THIS WILL DOWNLOAD AND RUN THE DOTNET INSTALLER FROM MICROSOFT",
         "--------------------------------------------------------",
-        "Press any key to continue"
+        "",
+        "Press Enter to start"
     )
 
     val commands = listOf(

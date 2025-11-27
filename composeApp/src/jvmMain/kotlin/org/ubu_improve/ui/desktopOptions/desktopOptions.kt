@@ -19,35 +19,42 @@ import org.ubu_improve.ui.SharpButton
 import org.ubu_improve.ui.SharpButtonGray
 import org.ubu_improve.ui.theme.AppTypography
 
+val buttonFractionMaxSize = 0.775f
+val infoIcon = "\uD83D\uDEC8"
+
 @Composable
 @Preview
 fun desktopOptions() {
     MaterialTheme(colorScheme = ColorTheme().darkTheme, typography = AppTypography){
         Surface() {
             Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-               //BUTTON GNOME SOFTWARE
+
+                //BUTTON GNOME SOFTWARE
                 Row(Modifier.fillMaxWidth()){
-                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(0.9f)){
+                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
                         Box(Modifier.fillMaxWidth()){
-                            Text("Switch to Gnome-Software", textAlign = TextAlign.Start)
+                            Text("Switch to Gnome-Software \n(with Flathub enabled)", textAlign = TextAlign.Start)
                         }
                     }
                     SharpButtonGray(onClick = {}, modifier = Modifier.fillMaxWidth()){
-                        Text("?")
+                        Text("$infoIcon Info")
                     }
                 }
+
                 //BUTTON TASKBAR
                 Row(Modifier.fillMaxWidth()){
-                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(0.9f)){
+                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
                         Box(Modifier.fillMaxWidth()){
-                            Text("Install better Taskbar", textAlign = TextAlign.Start)
+                            Text("Switch to a single Taskbar \n(like in Windows)", textAlign = TextAlign.Start)
                         }
                     }
-                    SharpButtonGray(onClick = {}, modifier = Modifier.fillMaxWidth()){
-                        Text("?")
-
+                    SharpButtonGray(onClick = {}, modifier = Modifier){
+                        Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterEnd){
+                            Text("\uD83D\uDEC8 Info")
+                        }
                     }
                 }
+
 
 
 
