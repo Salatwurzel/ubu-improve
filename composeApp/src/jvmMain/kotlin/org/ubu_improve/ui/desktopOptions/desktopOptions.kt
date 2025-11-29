@@ -60,7 +60,7 @@ fun desktopOptions() {
                 }
 
                 if (showDialogDashToPanel.value == true){
-                    infoDialogDashToPanel(onOkRequest = {showDialogDashToPanel.value = false}, onDismissRequest = {})
+                    infoDialogDashToPanel(onOkRequest = {installDashToPanel(); showDialogDashToPanel.value = false}, onDismissRequest = {showDialogDashToPanel.value = false})
                 }
 
 

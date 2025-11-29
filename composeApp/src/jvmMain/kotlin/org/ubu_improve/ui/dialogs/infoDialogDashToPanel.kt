@@ -27,11 +27,11 @@ import ubu_improve.composeapp.generated.resources.dash_to_panel_preview
 fun infoDialogDashToPanel(onOkRequest: () -> Unit, onDismissRequest: () -> Unit) {
     //val infoIcon = Image(painter = painterResource(Res.drawable.wurzelavatar), contentDescription = "Info Icon")
     Dialog(onDismissRequest = { onDismissRequest() }) {
-        Card(modifier = Modifier.fillMaxWidth().height(450.dp).padding(5.dp), shape = RoundedCornerShape(5.dp),
+        Card(modifier = Modifier.fillMaxWidth().height(520.dp).padding(5.dp), shape = RoundedCornerShape(5.dp),
         ) {
             Column(Modifier.fillMaxSize().padding(10.dp)){
                 //CONTENT COLUMN
-                Column (Modifier.fillMaxWidth().fillMaxHeight(0.8f).padding(0.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.Start){
+                Column (Modifier.fillMaxWidth().fillMaxHeight(0.9f).padding(0.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.Start){
 
                     //BOX FOR SHOW TITLE ON TOP
                     Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
@@ -42,7 +42,7 @@ fun infoDialogDashToPanel(onOkRequest: () -> Unit, onDismissRequest: () -> Unit)
 
                     Column(Modifier.fillMaxSize().align(Alignment.CenterHorizontally)){
                         Text("Use a single Taskbar, just like in Windows")
-                        Spacer(Modifier.height(30.dp))
+                        Spacer(Modifier.height(15.dp))
                         Image(painterResource(Res.drawable.dash_to_panel_preview), contentDescription = "Dash-to-Panel Preview", modifier = Modifier.fillMaxWidth(0.97f).align(Alignment.CenterHorizontally))
                     }
                 }
@@ -51,7 +51,7 @@ fun infoDialogDashToPanel(onOkRequest: () -> Unit, onDismissRequest: () -> Unit)
                 Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.Center){
                     Row(){
                         SharpButton(onClick = { onOkRequest() }){
-                            Text("OK")
+                            Text("➡\uFE0F RUN")
                         }
                     }
                     Spacer(Modifier.width(20.dp))

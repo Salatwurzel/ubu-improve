@@ -20,7 +20,7 @@ fun main() = application {
     Window(
         onCloseRequest = {exitProcess(0)},
         title = "ubu-improve",
-        state = WindowState(size = DpSize(760.dp, 630.dp)),
+        state = WindowState(size = DpSize(760.dp, 640.dp)),
         icon = org.jetbrains.compose.resources.painterResource(Res.drawable.wurzelavatar),
     )
     {

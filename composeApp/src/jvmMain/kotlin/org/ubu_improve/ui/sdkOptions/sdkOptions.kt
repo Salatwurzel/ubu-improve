@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import org.ubu_improve.logic.installDotnet
 import org.ubu_improve.logic.installKotlinSDK
 import org.ubu_improve.logic.installRustSDK
 import org.ubu_improve.logic.switchToGnomeSoftwareWithFlatpak
@@ -38,7 +39,7 @@ fun sdkOptions() {
             Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
                 //DOTNET SDK BUTTON
                 Row(Modifier.fillMaxWidth()){
-                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
+                    SharpButton(onClick = { installDotnet() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
                         Box(Modifier.fillMaxWidth()){
                             Text("Install .NET", textAlign = TextAlign.Start)
                         }
