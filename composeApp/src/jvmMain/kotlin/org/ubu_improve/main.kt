@@ -18,10 +18,7 @@ var currentVersion: String = "0.1-Alpha"
 
 fun main() = application {
     Window(
-        onCloseRequest = {
-            exitProcess(0)
-                         }
-        ,
+        onCloseRequest = {exitProcess(0)},
         title = "ubu-improve",
         state = WindowState(size = DpSize(760.dp, 630.dp)),
         icon = org.jetbrains.compose.resources.painterResource(Res.drawable.wurzelavatar),
