@@ -27,32 +27,6 @@ fun SharpButton(
     modifier: Modifier = Modifier.widthIn(min = minWidth),
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource? = null,
-    shape: Shape = RoundedCornerShape(0.dp),
-    border: BorderStroke? = null,
-    colors: ButtonColors = ButtonDefaults.buttonColors(),
-    elevation: ButtonElevation? = ButtonDefaults.buttonElevation(),
-    contentPadding: PaddingValues = PaddingValues(horizontal = 8.dp),
-    content: @Composable (RowScope.() -> Unit),
-){
-    Button(
-        onClick = onClick,
-        modifier = modifier,
-        colors = colors,
-        elevation = elevation,
-        shape = shape,
-        contentPadding = contentPadding,
-    ) {
-        content()
-    }
-}
-
-@Composable
-@Preview
-fun SharpMaxButton(
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier.fillMaxWidth(0.95f),
-    enabled: Boolean = true,
-    interactionSource: MutableInteractionSource? = null,
     shape: Shape = RoundedCornerShape(3.dp),
     border: BorderStroke? = null,
     colors: ButtonColors = ButtonDefaults.buttonColors(),

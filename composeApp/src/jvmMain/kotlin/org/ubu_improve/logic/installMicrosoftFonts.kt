@@ -1,18 +1,17 @@
 package org.ubu_improve.logic
 
-fun installRustSDK() {
+fun installMicrosoftFonts() {
     val startMessages = listOf(
         "---------------------------------",
-        "THIS WILL DOWNLOAD AND EXECUTE THE RUST INSTALLER",
+        "This will install the Microsoft Fonts",
+        "You will need to accept the EULA during installation",
         "---------------------------------",
         "",
-        "Press Enter to continue"
+        "Press Enter to start"
     )
 
     val commands = listOf(
-        "wget http://sh.rustup.rs -O /tmp/rustup-init.sh",
-        "chmod +x /tmp/rustup-init.sh",
-        "sh /tmp/rustup-init.sh"
+        "sudo apt install ttf-mscorefonts-installer -y",
     )
 
     runShellCommands(commands, pressEnterBeforeStart = true, messagesBeforeStart = startMessages)

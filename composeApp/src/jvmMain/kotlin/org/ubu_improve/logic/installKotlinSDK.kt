@@ -1,18 +1,19 @@
 package org.ubu_improve.logic
 
-fun installRustSDK() {
+fun installKotlinSDK() {
     val startMessages = listOf(
         "---------------------------------",
-        "THIS WILL DOWNLOAD AND EXECUTE THE RUST INSTALLER",
+        "THIS WILL DOWNLOAD AND INSTALL THE LATEST KOTLIN SDK",
+        "It will be installed as snap package",
         "---------------------------------",
         "",
-        "Press Enter to continue"
+        "Press Enter to start"
     )
 
     val commands = listOf(
-        "wget http://sh.rustup.rs -O /tmp/rustup-init.sh",
-        "chmod +x /tmp/rustup-init.sh",
-        "sh /tmp/rustup-init.sh"
+        "sudo apt install snapd -y",
+        "sudo snap install kotlin --classic",
+        "sudo apt install default-jdk -y"
     )
 
     runShellCommands(commands, pressEnterBeforeStart = true, messagesBeforeStart = startMessages)

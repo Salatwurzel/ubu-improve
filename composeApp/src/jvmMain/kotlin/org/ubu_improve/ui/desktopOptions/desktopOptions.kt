@@ -10,17 +10,21 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import org.ubu_improve.logic.installDashToPanel
 import org.ubu_improve.logic.switchToGnomeSoftwareWithFlatpak
 import org.ubu_improve.ui.theme.ColorTheme
 import org.ubu_improve.ui.SharpButton
 import org.ubu_improve.ui.SharpButtonGray
+import org.ubu_improve.ui.dialogs.infoDialogDashToPanel
 import org.ubu_improve.ui.theme.AppTypography
 
 val buttonFractionMaxSize = 0.775f
 val infoIcon = "\uD83D\uDEC8"
+var showDialogDashToPanel = mutableStateOf(false)
 
 @Composable
 @Preview
@@ -43,16 +47,20 @@ fun desktopOptions() {
 
                 //BUTTON TASKBAR
                 Row(Modifier.fillMaxWidth()){
-                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
+                    SharpButton(onClick = { installDashToPanel() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
                         Box(Modifier.fillMaxWidth()){
-                            Text("Switch to a single Taskbar \n(like in Windows)", textAlign = TextAlign.Start)
+                            Text("Switch to single Taskbar \n(like in Windows)", textAlign = TextAlign.Start)
                         }
                     }
-                    SharpButtonGray(onClick = {}, modifier = Modifier){
+                    SharpButtonGray(onClick = {showDialogDashToPanel.value = true}, modifier = Modifier){
                         Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterEnd){
                             Text("\uD83D\uDEC8 Info")
                         }
                     }
+                }
+
+                if (showDialogDashToPanel.value == true){
+                    infoDialogDashToPanel(onOkRequest = {showDialogDashToPanel.value = false}, onDismissRequest = {})
                 }
 
 

@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import org.ubu_improve.logic.installKotlinSDK
 import org.ubu_improve.logic.installRustSDK
 import org.ubu_improve.logic.switchToGnomeSoftwareWithFlatpak
 import org.ubu_improve.ui.theme.ColorTheme
@@ -48,7 +49,7 @@ fun sdkOptions() {
                 }
                 //KOTLIN SDK BUTTON
                 Row(Modifier.fillMaxWidth()){
-                    SharpButton(onClick = { switchToGnomeSoftwareWithFlatpak() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
+                    SharpButton(onClick = { installKotlinSDK() }, modifier = Modifier.fillMaxWidth(buttonFractionMaxSize)){
                         Box(Modifier.fillMaxWidth()){
                             Text("Install Kotlin + Java", textAlign = TextAlign.Start)
                         }
